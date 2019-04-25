@@ -6,8 +6,13 @@
 //  Copyright © 2019 Jonny Kuang. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import AppKit;
+#import "AppDelegate.h"
 
 int main(int argc, const char * argv[]) {
-    return NSApplicationMain(argc, argv);
+    NSApplication *app = NSApplication.sharedApplication;
+    AppDelegate *delegate = [[AppDelegate alloc] init];
+    
+    app.delegate = delegate;
+    [app run];
 }

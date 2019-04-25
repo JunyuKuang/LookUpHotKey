@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FB16CB452272022E00002CF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16CB442272022E00002CF2 /* AppDelegate.m */; };
-		FB16CB482272022E00002CF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16CB472272022E00002CF2 /* ViewController.m */; };
-		FB16CB4A2272022E00002CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB16CB492272022E00002CF2 /* Assets.xcassets */; };
-		FB16CB4D2272022E00002CF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB16CB4B2272022E00002CF2 /* Main.storyboard */; };
 		FB16CB502272022E00002CF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16CB4F2272022E00002CF2 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -18,10 +15,6 @@
 		FB16CB402272022E00002CF2 /* LookUpHotKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookUpHotKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB16CB432272022E00002CF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB16CB442272022E00002CF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB16CB462272022E00002CF2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB16CB472272022E00002CF2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FB16CB492272022E00002CF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FB16CB4C2272022E00002CF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB16CB4E2272022E00002CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB16CB4F2272022E00002CF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB16CB512272022E00002CF2 /* LookUpHotKey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LookUpHotKey.entitlements; sourceTree = "<group>"; };
@@ -59,10 +52,6 @@
 			children = (
 				FB16CB432272022E00002CF2 /* AppDelegate.h */,
 				FB16CB442272022E00002CF2 /* AppDelegate.m */,
-				FB16CB462272022E00002CF2 /* ViewController.h */,
-				FB16CB472272022E00002CF2 /* ViewController.m */,
-				FB16CB492272022E00002CF2 /* Assets.xcassets */,
-				FB16CB4B2272022E00002CF2 /* Main.storyboard */,
 				FB16CB4E2272022E00002CF2 /* Info.plist */,
 				FB16CB4F2272022E00002CF2 /* main.m */,
 				FB16CB512272022E00002CF2 /* LookUpHotKey.entitlements */,
@@ -127,8 +116,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB16CB4A2272022E00002CF2 /* Assets.xcassets in Resources */,
-				FB16CB4D2272022E00002CF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,24 +126,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB16CB482272022E00002CF2 /* ViewController.m in Sources */,
 				FB16CB502272022E00002CF2 /* main.m in Sources */,
 				FB16CB452272022E00002CF2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FB16CB4B2272022E00002CF2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB16CB4C2272022E00002CF2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FB16CB522272022E00002CF2 /* Debug */ = {
@@ -283,6 +258,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonny.LookUpHotKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -301,6 +277,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonny.LookUpHotKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
