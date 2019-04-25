@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 @import Carbon;
+@import ServiceManagement;
 
 
 static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void *context)
@@ -38,6 +39,12 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {    
+    [self configureHotKey];
+    [self configureLaunchAtLogin];
+}
+
+- (void)configureHotKey
+{
     EventTargetRef target = GetApplicationEventTarget();
     EventTypeSpec spec = {
         .eventClass = kEventClassKeyboard,
@@ -51,6 +58,11 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
     };
     EventHotKeyRef hotKeyRef;
     RegisterEventHotKey(kVK_ANSI_D, optionKey, hotKeyID, target, 0, &hotKeyRef);
+}
+
+- (void)configureLaunchAtLogin
+{
+    SMLoginItemSetEnabled((__bridge CFStringRef)@"com.jonny.LookUpHotKeyLoginHelper", YES);
 }
 
 @end

@@ -9,7 +9,24 @@
 /* Begin PBXBuildFile section */
 		FB16CB452272022E00002CF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16CB442272022E00002CF2 /* AppDelegate.m */; };
 		FB16CB502272022E00002CF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16CB4F2272022E00002CF2 /* main.m */; };
+		FB16CB70227206C600002CF2 /* LoginHelper.app in Copy LoginHelper */ = {isa = PBXBuildFile; fileRef = FB16CB5B2272068400002CF2 /* LoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FB16CB74227206FC00002CF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16CB71227206FC00002CF2 /* AppDelegate.m */; };
+		FB16CB75227206FC00002CF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16CB73227206FC00002CF2 /* main.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB16CB6F227206A200002CF2 /* Copy LoginHelper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				FB16CB70227206C600002CF2 /* LoginHelper.app in Copy LoginHelper */,
+			);
+			name = "Copy LoginHelper";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FB16CB402272022E00002CF2 /* LookUpHotKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookUpHotKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,10 +35,23 @@
 		FB16CB4E2272022E00002CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB16CB4F2272022E00002CF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB16CB512272022E00002CF2 /* LookUpHotKey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LookUpHotKey.entitlements; sourceTree = "<group>"; };
+		FB16CB5B2272068400002CF2 /* LoginHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB16CB682272068500002CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB16CB6B2272068500002CF2 /* LoginHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginHelper.entitlements; sourceTree = "<group>"; };
+		FB16CB71227206FC00002CF2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB16CB72227206FC00002CF2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB16CB73227206FC00002CF2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FB16CB3D2272022E00002CF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB16CB582272068400002CF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				FB16CB422272022E00002CF2 /* LookUpHotKey */,
+				FB16CB5C2272068400002CF2 /* LoginHelper */,
 				FB16CB412272022E00002CF2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				FB16CB402272022E00002CF2 /* LookUpHotKey.app */,
+				FB16CB5B2272068400002CF2 /* LoginHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +91,18 @@
 			path = LookUpHotKey;
 			sourceTree = "<group>";
 		};
+		FB16CB5C2272068400002CF2 /* LoginHelper */ = {
+			isa = PBXGroup;
+			children = (
+				FB16CB72227206FC00002CF2 /* AppDelegate.h */,
+				FB16CB71227206FC00002CF2 /* AppDelegate.m */,
+				FB16CB682272068500002CF2 /* Info.plist */,
+				FB16CB73227206FC00002CF2 /* main.m */,
+				FB16CB6B2272068500002CF2 /* LoginHelper.entitlements */,
+			);
+			path = LoginHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -69,6 +113,7 @@
 				FB16CB3C2272022E00002CF2 /* Sources */,
 				FB16CB3D2272022E00002CF2 /* Frameworks */,
 				FB16CB3E2272022E00002CF2 /* Resources */,
+				FB16CB6F227206A200002CF2 /* Copy LoginHelper */,
 			);
 			buildRules = (
 			);
@@ -77,6 +122,23 @@
 			name = LookUpHotKey;
 			productName = LookUpHotKey;
 			productReference = FB16CB402272022E00002CF2 /* LookUpHotKey.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB16CB5A2272068400002CF2 /* LoginHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB16CB6C2272068500002CF2 /* Build configuration list for PBXNativeTarget "LoginHelper" */;
+			buildPhases = (
+				FB16CB572272068400002CF2 /* Sources */,
+				FB16CB582272068400002CF2 /* Frameworks */,
+				FB16CB592272068400002CF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoginHelper;
+			productName = LoginHelper;
+			productReference = FB16CB5B2272068400002CF2 /* LoginHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -89,6 +151,9 @@
 				ORGANIZATIONNAME = "Jonny Kuang";
 				TargetAttributes = {
 					FB16CB3F2272022E00002CF2 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					FB16CB5A2272068400002CF2 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -107,12 +172,20 @@
 			projectRoot = "";
 			targets = (
 				FB16CB3F2272022E00002CF2 /* LookUpHotKey */,
+				FB16CB5A2272068400002CF2 /* LoginHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FB16CB3E2272022E00002CF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB16CB592272068400002CF2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,6 +201,15 @@
 			files = (
 				FB16CB502272022E00002CF2 /* main.m in Sources */,
 				FB16CB452272022E00002CF2 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB16CB572272068400002CF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB16CB75227206FC00002CF2 /* main.m in Sources */,
+				FB16CB74227206FC00002CF2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +330,6 @@
 		FB16CB552272022E00002CF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LookUpHotKey/LookUpHotKey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -267,7 +348,6 @@
 		FB16CB562272022E00002CF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LookUpHotKey/LookUpHotKey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -280,6 +360,46 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonny.LookUpHotKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FB16CB6D2272068500002CF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoginHelper/LoginHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FF973S8UP2;
+				INFOPLIST_FILE = LoginHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonny.LookUpHotKeyLoginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FB16CB6E2272068500002CF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoginHelper/LoginHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FF973S8UP2;
+				INFOPLIST_FILE = LoginHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonny.LookUpHotKeyLoginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -300,6 +420,15 @@
 			buildConfigurations = (
 				FB16CB552272022E00002CF2 /* Debug */,
 				FB16CB562272022E00002CF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB16CB6C2272068500002CF2 /* Build configuration list for PBXNativeTarget "LoginHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB16CB6D2272068500002CF2 /* Debug */,
+				FB16CB6E2272068500002CF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
