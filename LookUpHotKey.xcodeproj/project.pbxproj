@@ -34,7 +34,6 @@
 		FB16CB442272022E00002CF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB16CB4E2272022E00002CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB16CB4F2272022E00002CF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FB16CB512272022E00002CF2 /* LookUpHotKey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LookUpHotKey.entitlements; sourceTree = "<group>"; };
 		FB16CB5B2272068400002CF2 /* LoginHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB16CB682272068500002CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB16CB6B2272068500002CF2 /* LoginHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginHelper.entitlements; sourceTree = "<group>"; };
@@ -86,7 +85,6 @@
 				FB16CB442272022E00002CF2 /* AppDelegate.m */,
 				FB16CB4E2272022E00002CF2 /* Info.plist */,
 				FB16CB4F2272022E00002CF2 /* main.m */,
-				FB16CB512272022E00002CF2 /* LookUpHotKey.entitlements */,
 			);
 			path = LookUpHotKey;
 			sourceTree = "<group>";
@@ -152,9 +150,19 @@
 				TargetAttributes = {
 					FB16CB3F2272022E00002CF2 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
 					};
 					FB16CB5A2272068400002CF2 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -330,10 +338,10 @@
 		FB16CB552272022E00002CF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = LookUpHotKey/LookUpHotKey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FF973S8UP2;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = LookUpHotKey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -348,10 +356,10 @@
 		FB16CB562272022E00002CF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = LookUpHotKey/LookUpHotKey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FF973S8UP2;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = LookUpHotKey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -371,6 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FF973S8UP2;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = LoginHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,6 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FF973S8UP2;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = LoginHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
