@@ -39,11 +39,11 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {    
-    [self configureHotKey];
+    [self configureHotKeys];
     [self configureLaunchAtLogin];
 }
 
-- (void)configureHotKey
+- (void)configureHotKeys
 {
     EventTargetRef target = GetApplicationEventTarget();
     EventTypeSpec spec = {
@@ -52,11 +52,18 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
     };
     InstallEventHandler(target, HotKeyEventCallback, 1, &spec, nil, nil);
     
+    EventHotKeyRef hotKeyRef;
+    
     EventHotKeyID hotKeyID = {
         .signature = 'JONY',
         .id = 1
     };
-    EventHotKeyRef hotKeyRef;
+    RegisterEventHotKey(kVK_ANSI_A, optionKey, hotKeyID, target, 0, &hotKeyRef);
+    
+    hotKeyID.id = 2;
+    RegisterEventHotKey(kVK_ANSI_S, optionKey, hotKeyID, target, 0, &hotKeyRef);
+    
+    hotKeyID.id = 3;
     RegisterEventHotKey(kVK_ANSI_D, optionKey, hotKeyID, target, 0, &hotKeyRef);
 }
 
