@@ -12,6 +12,7 @@
 		FB16CB70227206C600002CF2 /* LoginHelper.app in Copy LoginHelper */ = {isa = PBXBuildFile; fileRef = FB16CB5B2272068400002CF2 /* LoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FB16CB74227206FC00002CF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16CB71227206FC00002CF2 /* AppDelegate.m */; };
 		FB16CB75227206FC00002CF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB16CB73227206FC00002CF2 /* main.m */; };
+		FB16CBC62272BFE900002CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB16CBC52272BFE900002CF2 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 		FB16CB71227206FC00002CF2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB16CB72227206FC00002CF2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB16CB73227206FC00002CF2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB16CBC52272BFE900002CF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				FB16CB432272022E00002CF2 /* AppDelegate.h */,
 				FB16CB442272022E00002CF2 /* AppDelegate.m */,
+				FB16CBC52272BFE900002CF2 /* Assets.xcassets */,
 				FB16CB4E2272022E00002CF2 /* Info.plist */,
 				FB16CB4F2272022E00002CF2 /* main.m */,
 			);
@@ -190,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB16CBC62272BFE900002CF2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +342,7 @@
 		FB16CB552272022E00002CF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FF973S8UP2;
@@ -356,6 +361,7 @@
 		FB16CB562272022E00002CF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FF973S8UP2;
