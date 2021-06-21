@@ -23,15 +23,15 @@ static void performDoubleClick()
     CGEventPost(kCGHIDEventTap, event);
     CGEventSetType(event, kCGEventLeftMouseUp);
     CGEventPost(kCGHIDEventTap, event);
-
+    
     CGEventSetIntegerValueField(event, kCGMouseEventClickState, 2);
-
+    
     CGEventSetType(event, kCGEventLeftMouseDown);
     CGEventPost(kCGHIDEventTap, event);
-
+    
     CGEventSetType(event, kCGEventLeftMouseUp);
     CGEventPost(kCGHIDEventTap, event);
-
+    
     CFRelease(event);
 }
 
