@@ -16,9 +16,6 @@ static void performDoubleClick()
     CGPoint mouseLocation = NSEvent.mouseLocation;
     CGPoint convertedMouseLocation = CGPointMake(mouseLocation.x, screenHeight - mouseLocation.y);
     
-    NSLog(@"NSEvent.mouseLocation %@", NSStringFromPoint(NSEvent.mouseLocation));
-    NSLog(@"convertedMouseLocation %@", NSStringFromPoint(convertedMouseLocation));
-    
     CGEventRef event = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, convertedMouseLocation, kCGMouseButtonLeft);
     CGEventPost(kCGHIDEventTap, event);
     CGEventSetType(event, kCGEventLeftMouseUp);
