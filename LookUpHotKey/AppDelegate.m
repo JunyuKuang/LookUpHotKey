@@ -10,8 +10,32 @@
 @import Carbon;
 @import ServiceManagement;
 
+static void performDoubleClick()
+{
+    CGFloat screenHeight = NSScreen.mainScreen.frame.size.height;
+    CGPoint mouseLocation = NSEvent.mouseLocation;
+    CGPoint convertedMouseLocation = CGPointMake(mouseLocation.x, screenHeight - mouseLocation.y);
+    
+    NSLog(@"NSEvent.mouseLocation %@", NSStringFromPoint(NSEvent.mouseLocation));
+    NSLog(@"convertedMouseLocation %@", NSStringFromPoint(convertedMouseLocation));
+    
+    CGEventRef event = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, convertedMouseLocation, kCGMouseButtonLeft);
+    CGEventPost(kCGHIDEventTap, event);
+    CGEventSetType(event, kCGEventLeftMouseUp);
+    CGEventPost(kCGHIDEventTap, event);
 
-static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void *context)
+    CGEventSetIntegerValueField(event, kCGMouseEventClickState, 2);
+
+    CGEventSetType(event, kCGEventLeftMouseDown);
+    CGEventPost(kCGHIDEventTap, event);
+
+    CGEventSetType(event, kCGEventLeftMouseUp);
+    CGEventPost(kCGHIDEventTap, event);
+
+    CFRelease(event);
+}
+
+static void performLookupKeyboardShortcut()
 {
     CGEventTapLocation tapLocation = kCGHIDEventTap;
     
@@ -27,6 +51,15 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
     CGEventPost(tapLocation, keyDownEvent);
     CGEventPost(tapLocation, keyUpEvent);
     
+    CFRelease(keyDownEvent);
+    CFRelease(keyUpEvent);
+    CFRelease(eventSource);
+}
+
+static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void *context)
+{
+    performDoubleClick();
+    performLookupKeyboardShortcut();
     return noErr;
 }
 
