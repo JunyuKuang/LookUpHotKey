@@ -55,7 +55,10 @@ static void performLookupKeyboardShortcut()
 
 static void performLookup()
 {
-    performDoubleClick();
+    if (@available(macOS 11.3, *)) {
+        // workaround the WebKit lookup failure introduced in macOS 11.3
+        performDoubleClick();
+    }
     performLookupKeyboardShortcut();
 }
 
