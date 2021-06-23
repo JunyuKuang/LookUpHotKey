@@ -53,10 +53,15 @@ static void performLookupKeyboardShortcut()
     CFRelease(eventSource);
 }
 
-static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void *context)
+static void performLookup()
 {
     performDoubleClick();
     performLookupKeyboardShortcut();
+}
+
+static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void *context)
+{
+    performLookup();
     return noErr;
 }
 
@@ -71,6 +76,12 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
 {    
     [self configureHotKeys];
     [self configureLaunchAtLogin];
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
+{
+    performLookup();
+    return NO;
 }
 
 - (void)configureHotKeys
