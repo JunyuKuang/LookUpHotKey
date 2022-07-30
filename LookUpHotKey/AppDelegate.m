@@ -57,7 +57,11 @@ static void performLookup()
 {
     if (@available(macOS 11.3, *)) {
         // workaround the WebKit lookup failure introduced in macOS 11.3
-        performDoubleClick();
+        if (@available(macOS 12.5, *)) {
+            // seems no longer an issue on macOS 12.5 with Safari 15.6
+        } else {
+            performDoubleClick();
+        }
     }
     performLookupKeyboardShortcut();
 }
@@ -76,7 +80,10 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{    
+{
+    if (@available(macOS 10.15, *)) {
+        CGRequestPostEventAccess();
+    }
     [self configureHotKeys];
     [self configureLaunchAtLogin];
 }
